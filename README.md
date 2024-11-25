@@ -37,3 +37,10 @@ Composing with Bytebeat is half music, half math, and all fun. Here’s how to g
    Begin with a single pattern, like a square wave:  
    ```python
    (t * (t >> 10 | t >> 8)) & 255
+   ```
+
+2. **🔄 Add Variation**
+Experiment with small tweaks:
+    ```python
+    (t * (t >> 8 | t >> 12)) & 255
+    ```
