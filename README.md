@@ -36,30 +36,30 @@ Composing with Bytebeat is half music, half math, and all fun. Here’s how to g
 1. **🎹 Start Simple**  
    Begin with a single pattern, like a square wave:  
    ```python
-   (t * (t >> 10 | t >> 8)) & 64
+   (t * (t >> 10 | t >> 8)) & 128
    ```
 
 2. **🔄 Add Variation**
 Experiment with small tweaks:
     ```python
-    (t * (t >> 8 | t >> 12)) & 64
+    (t * (t >> 8 | t >> 12)) & 128
     ```
 
 3. **🎸 Layer Your Sounds**
 Combine multiple patterns using addition or bitwise OR:
     ```python
-    ((t >> 7 | t >> 6) * (t >> 5 | t >> 8)) & 64
+    ((t >> 7 | t >> 6) * (t >> 5 | t >> 8)) & 255
     ```
 
 4. **🎵 Introduce Modulo Magic**
 Use % to create repeating patterns or arpeggios:
     ```python
-    (t * ((t >> 5 | t >> 8) & 63)) & 64
+    (t * ((t >> 5 | t >> 8) & 63)) & 255
     ```
 5. **🤪 Be Chaotically Creative**
 Let the CPU surprise you! Sometimes, the weirdest expressions produce the best sounds:
     ```python
-    (t * (t >> 9 | t >> 7) & t >> 11) & 64
+    (t * (t >> 9 | t >> 7) & t >> 11) & 255
     ```
 
 ### 🎛 **🎵 Good-Sounding Bytebeat Examples**
@@ -67,12 +67,12 @@ Here are some examples to get you started:
 
 1. **🎼 Classic Square Wave**
     ```python
-    (t * (t >> 10 | t >> 8)) & 64
+    (t * (t >> 10 | t >> 8)) & 255
     ```
 
 2. **🎶 Chiptune Melody**
     ```python
-    (t * ((t >> 5 | t >> 8) & 63)) & 64
+    (t * ((t >> 5 | t >> 8) & 63)) & 255
     ```
 
 3. **🥁 Drum Beat**
@@ -82,21 +82,21 @@ Here are some examples to get you started:
 
 4. **🎹 Arpeggio Sequence**
     ```python
-    (t >> 6 | t >> 8 | t % 32) & 64
+    (t >> 6 | t >> 8 | t % 32) & 255
     ```
 
 5. **🌈 Harmonic Bliss**
     ```python
-    ((t >> 7 | t >> 6) * (t >> 5 | t >> 8)) & 64
+    ((t >> 7 | t >> 6) * (t >> 5 | t >> 8)) & 255
     ```
 
 6. **🌀 Experimental Noise**
     ```python
-    ((t >> 4 | t % 13) * (t >> 7 & t >> 8)) & 64
+    ((t >> 4 | t % 13) * (t >> 7 & t >> 8)) & 255
     ```
 7. **⏫ Rising Melody with Beats**
     ```python
-    (t * (5 + ((t >> 9) & 7))) & 64
+    (t * (5 + ((t >> 9) & 7))) & 255
     ```
 
 ## 💡 Pro Tips
