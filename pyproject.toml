@@ -9,6 +9,6 @@ Repository = "https://github.com/c0ffymachyne/ComfyUI_BeatByte"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "c0ffymachyne"
 DisplayName = "ComfyUI_BeatByte"
 Icon = ""
