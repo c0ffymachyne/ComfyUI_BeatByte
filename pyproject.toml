@@ -1,0 +1,14 @@
+[project]
+name = "comfyui_beatbyte"
+description = "Bytebeat is like composing music with the tools of a programmer’s toolkit. Instead of piano keys, you have operators like >>, |, and &. It’s like giving your CPU a guitar and letting it shred! 🤘"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/c0ffymachyne/ComfyUI_BeatByte"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "c0ffymachyne"
+DisplayName = "ComfyUI_BeatByte"
+Icon = ""
